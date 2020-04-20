@@ -1,5 +1,5 @@
 {
-  "name": "@datorama/themify",
+  "name": "datorama-themify",
   "version": "0.0.0-development",
   "description": "CSS themes made easy. A robust, opinionated solution to manage themes in your web application",
   "main": "dist/index.js",
@@ -30,12 +30,13 @@
     "commit": "git-cz",
     "build": "npm run clean:dist && tsc && npm run copy:dist",
     "prepublish": "npm run build",
-    "copy:dist": "cp -R src/sass/. package.json README.md dist",
+    "copy:dist": "cp -R src/sass/. dist",
+    "_copy:dist": "cp -R src/sass/. package.json README.md dist",
     "clean:dist": "rimraf dist",
     "format": "prettier --write --config .prettierrc src/*.ts src/**/*.ts playground/*.js",
     "test": "jest",
-    "commitmsg": "commitlint -e $GIT_PARAMS",
-    "precommit": "lint-staged",
+    "_commitmsg": "commitlint -e $GIT_PARAMS",
+    "_precommit": "lint-staged",
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"
   },
