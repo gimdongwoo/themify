@@ -3,5 +3,7 @@
   "tabWidth": 2,
   "useTabs": false,
   "printWidth": 5000,
-  "parser": "typescript"
+  "parser": "typescript",
+  "trailingComma": "all",
+  "arrowParens": "avoid"
 }
